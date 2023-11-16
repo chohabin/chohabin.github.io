@@ -24,14 +24,14 @@ social: true  # includes social icons at the bottom of the page
 현재 가장 관심 있는 분야는 인공지능 자연어 처리(NLP)입니다.\
 이 분야에 대해 더 깊이 공부하고 싶어 최신 논문들도 열심히 찾아보고 관련 프로젝트도 진행하고 있습니다.\
 앞으로도 계속해서 성장하며 다양한 프로젝트에 도전하고 싶습니다.\
-감사합니다. \
+감사합니다. 
 
 <br>
 
 > __Education__
 <br>
 
-__성균관대학교 소프트웨어학과 학사 재학중__\
+__성균관대학교 소프트웨어학과 학사 재학중__
 
 <br>
 
@@ -57,3 +57,6 @@ __수강 과목__ :
 🌍 gkqls0119@g.skku.edu\
 [github](https://github.com/chohabin) \
 [huggingface](https://huggingface.co/bingha33) 
+
+<br>
+<br>
