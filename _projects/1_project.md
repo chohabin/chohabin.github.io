@@ -5,7 +5,7 @@ description:
 img: assets/img/vaiv.png
 importance: 1
 category: work
-related_publications: einstein1956investigations, einstein1950meaning
+related_publications: 
 ---
 
 
