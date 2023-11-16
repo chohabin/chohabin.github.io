@@ -1,11 +1,11 @@
 ---
 layout: page
 title: 2023 산학협력프로젝트
-description: 
+description: 안녕하세요.
 img: assets/img/vaiv.png
 importance: 1
 category: work
-related_publications: 
+related_publications: false
 ---
 
 
