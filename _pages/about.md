@@ -17,8 +17,9 @@ latest_posts: true  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-> __### Introduction__
+> __Introduction__
 <br>
+
 안녕하세요! 저는 CS 공부 1년 차 병아리 개발자입니다.\
 현재 가장 관심 있는 분야는 인공지능 자연어 처리(NLP)입니다.\
 이 분야에 대해 더 깊이 공부하고 싶어 최신 논문들도 열심히 찾아보고 관련 프로젝트도 진행하고 있습니다.\
@@ -27,14 +28,14 @@ social: true  # includes social icons at the bottom of the page
 
 <br>
 
-> __### Education__
+> __Education__
 <br>
 
-##### 성균관대학교 소프트웨어학과 학사 재학중
+__성균관대학교 소프트웨어학과 학사 재학중__\
 
 <br>
 
-#### 수강 과목 :
+__수강 과목__ :
 - 알고리즘개론, 문제해결
 - 기계학습개론, 인공지능개론
 - 시프템프로그램, 컴퓨터구조개론
@@ -43,13 +44,14 @@ social: true  # includes social icons at the bottom of the page
 
 <br>
 
-> __### Skills__
+> __Skills__
 <br> 
-### python : ★★★★☆
-### C : ★★★★☆
-### Java : ★★★☆
 
-> __### Contract__
+- python : ★★★★☆
+- C : ★★★★☆
+- Java : ★★★☆
+
+> __Contract__
 <br>
 
 🌍 gkqls0119@g.skku.edu\
