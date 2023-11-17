@@ -11,7 +11,7 @@ on:
       - main
   workflow_dispatch: # workflow_dispatch event 발생했을 때, deploy workflow 실행
 
-permissions: # 이 workflow는 write 접근 권한 가진 사용자만 접근 가능 
+permissions: # write 권한 부여 
   contents: write
 
 jobs: 
