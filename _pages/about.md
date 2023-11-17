@@ -54,7 +54,7 @@ __수강 과목__ :
 > __Achievements and Certifications__
 <br>
 
-운전면허 2종 \
+운전면허 2종 
 
 > __Contract__
 <br>
