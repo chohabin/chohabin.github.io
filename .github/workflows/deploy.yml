@@ -1,49 +1,48 @@
 name: deploy
 
 on:
-  push:
+  push: # master(or main) branch에 push event 발생했을 때, deploy workflow 실행 
     branches:
       - master
       - main
-  pull_request:
+  pull_request: # master(or main) branch에 pull_request event 발생했을 때, deploy workflow 실행  
     branches:
       - master
       - main
-  workflow_dispatch:
+  workflow_dispatch: # workflow_dispatch event 발생했을 때, deploy workflow 실행
 
-permissions:
+permissions: # 이 workflow는 write 접근 권한 가진 사용자만 접근 가능 
   contents: write
 
-jobs:
-  deploy:
-    # available images: https://github.com/actions/runner-images#available-images
-    runs-on: ubuntu-latest
+jobs: 
+  deploy: # deploy job 정의 
+    runs-on: ubuntu-latest # ubuntu os에서 실행 
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
-    - name: Setup Ruby
+    - name: Checkout 🛎️ # checkout step : action/checout@v3 실행
+      uses: actions/checkout@v3 
+    - name: Setup Ruby # Setup ruby step : ruby/setup-ruby@v1 실행 
       uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.2.2'
-        bundler-cache: true
-    - name: Update _config.yml ⚙️
+      with: # action 실행 시, 조건 설정 
+        ruby-version: '3.2.2' # ruby 버전 지정
+        bundler-cache: true 
+    - name: Update _config.yml ⚙️ # Update _config.yml step : fjogeleit/yaml-update-action@v0.13.1 실행 
       uses: fjogeleit/yaml-update-action@v0.13.1
-      with:
-        commitChange: false
-        valueFile: '_config.yml'
-        propertyPath: 'giscus.repo'
-        value: ${{ github.repository }}
-    - name: Install and Build 🔧
+      with: # action 실행 시, 조건 설정 
+        commitChange: false # 커밋하지 않음
+        valueFile: '_config.yml' #업데이트할 파일
+        propertyPath: 'giscus.repo' #이 property 업데이트
+        value: ${{ github.repository }} # 현재 repository 사용
+    - name: Install and Build 🔧 # Install and Build step : 필요한 패키지 설치 후 프로젝트 빌드
       run: |
-        pip3 install --upgrade jupyter
+        pip3 install --upgrade jupyter 
         npm install -g mermaid.cli
         npm install -g purgecss
         export JEKYLL_ENV=production
         bundle exec jekyll build --lsi
         purgecss -c purgecss.config.js
-    - name: Deploy 🚀
-      if: github.event_name != 'pull_request'
+    - name: Deploy 🚀 # deploy step : JamesIves/github-pages-deploy-action@v4 실행 / event가 pull_request가 아닌 경우에만 실행
+      if: github.event_name != 'pull_request' 
       uses: JamesIves/github-pages-deploy-action@v4
-      with:
+      with: # _site 폴더 배포 
         folder: _site
 
